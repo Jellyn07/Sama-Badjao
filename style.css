@@ -1,0 +1,208 @@
+/* style.css */
+
+/* IMPORT GOOGLE FONTS for that modern look */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+:root {
+    /* CONCEPT: Deep Sea & Bioluminescence */
+    --bg-dark: #020c1b;       /* Very dark blue, almost black */
+    --bg-card: rgba(17, 34, 64, 0.7); /* Translucent blue for glass effect */
+    --primary: #64ffda;       /* Glowing Cyan (Bioluminescence) */
+    --secondary: #8892b0;     /* Muted Lavender/Grey for text */
+    --accent: #f72585;        /* Coral/Pink pop for buttons/highlights */
+    --gradient: linear-gradient(90deg, #64ffda 0%, #00b4d8 100%);
+    --white: #e6f1ff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif; /* Modern font */
+    background-color: var(--bg-dark);
+    /* Subtle background gradient to add depth */
+    background-image: radial-gradient(circle at 10% 20%, rgba(20, 50, 90, 0.4) 0%, transparent 40%);
+    color: var(--secondary);
+    line-height: 1.6;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    background: rgba(10, 25, 47, 0.85); /* Semi-transparent */
+    backdrop-filter: blur(10px);        /* Glass blur effect */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+/* .logo {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+} */
+
+nav div a {
+    color: var(--white);
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav div a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5); /* Glowing text effect */
+}
+
+/* --- TYPOGRAPHY --- */
+h1 {
+    font-size: 3rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-top: 50px;
+    border-left: 5px solid var(--accent);
+    padding-left: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--secondary);
+}
+
+/* --- LAYOUT & CARDS --- */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Inspiration: The Card Look */
+.card-container {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+    transform: translateY(-5px); /* Lift effect */
+    border-color: var(--primary);
+}
+
+/* --- IMAGES --- */
+.img-full {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    filter: brightness(0.9); /* Slightly dim images to fit dark mode */
+    transition: 0.3s;
+}
+
+.img-full:hover {
+    filter: brightness(1.1);
+}
+
+.img-small {
+    width: 250px;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.img-small:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* --- SLIDESHOW (Styled as a scrolling gallery) --- */
+.slideshow {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--bg-dark);
+}
+
+.slideshow img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* --- TEAM MEMBER CARDS --- */
+.team-card {
+    background: rgba(17, 34, 64, 0.5); /* Slightly darker glass */
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+    width: 200px; /* Fixed width for consistency */
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(247, 37, 133, 0.3); /* Pink glow on hover */
+}
+
+.team-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary); /* Cyan border around face */
+}
+
+.team-card h3 {
+    margin: 10px 0 5px 0;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.team-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--primary); /* Cyan text for roles */
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #020c1b;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
