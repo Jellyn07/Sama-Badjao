@@ -253,14 +253,39 @@ img {
     border: 3px solid var(--primary);
 }
 
-/* --- FOOTER --- */
-footer {
+/* --- FOOTER UI & FIX --- */
+
+/* Target the unnamed div at the bottom */
+body > div:last-of-type {
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+    padding: 50px 20px;
     text-align: center;
-    padding: 40px 20px;
-    background: #020c1b;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 80px; /* Separation from content */
+}
+
+/* Style the Copyright (h6) */
+body > div:last-of-type h6 {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 15px 0;
+    letter-spacing: 1px;
+}
+
+/* Style the Disclaimer (p) + THE FIX */
+body > div:last-of-type p {
     color: var(--secondary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+    
+    /* THE FIX: 
+       We use !important to override the .reveal class added by JS.
+       This prevents the footer text from being hidden (opacity: 0).
+    */
+    opacity: 1 !important; 
+    transform: none !important;
 }
 
 /* --- ANIMATIONS --- */
