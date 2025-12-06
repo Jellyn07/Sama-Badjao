@@ -1,50 +1,9 @@
-function setActiveNavLink() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-links a');
-    
-    navLinks.forEach(link => {
-        // Get the href and extract just the filename
-        const linkHref = link.getAttribute('href');
-        const linkPage = linkHref.split('/').pop();
-        
-        // Remove active class from all links
-        link.classList.remove('active');
-        
-        // Add active class to current page link
-        if (linkPage === currentPage) {
-            link.classList.add('active');
-        }
-        
-        // Special case: index.html for home page
-        if (currentPage === '' || currentPage === 'index.html') {
-            if (linkHref === 'index.html' || linkHref === './' || linkHref === '/') {
-                link.classList.add('active');
-            }
-        }
-    });
-}
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Mobile Navigation Toggle ---
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
-    setActiveNavLink();
-    
-    // Close mobile menu when clicking a link
     const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            // Close mobile menu
-            nav.classList.remove('nav-active');
-            burger.classList.remove('toggle');
-            
-            // Update active state
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
 
     burger.addEventListener('click', () => {
         // Toggle Nav
@@ -134,7 +93,7 @@ function goToSlide(index) {
 
 function startAutoCycle() {
     clearInterval(slideshowInterval);
-    slideshowInterval = setInterval(nextSlide, 2000); // 3 seconds between slides
+    slideshowInterval = setInterval(nextSlide, 3000); // 3 seconds between slides
 }
 
 function pauseAutoCycle() {
