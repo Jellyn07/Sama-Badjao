@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
     <link rel="icon" type="image/png" href="logo_upper.png">
 </head>
 <body>
@@ -29,39 +31,106 @@
     </div>
 </nav>
 
-<section>
-    <h2>Gallery</h2>
-    <div class="flex">
-        <img src="/img/about/1.jpg" width="250" class="img-small">
-        <img src="/img/about/2.jpg" width="250" class="img-small">
-        <img src="/img/about/3.jpg" width="250" class="img-small">
-        <img src="/img/about/4.jpg" width="250" class="img-small">
+<h2 id="pageTitle" class="reveal active topLine">Gallery</h2>
 
-        <img src="/img/arts/1.png" width="250" class="img-small">
-        <img src="/img/arts/2.jpg" width="250" class="img-small">
+<section class="carousel" ontouchstart="touchstart(event)" ontouchmove="touchmove(event)" ontouchend="touchend()">
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/cultural_glimpse/1.JPG) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/visual_journey/1.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/cultural_glimpse/2.JPG) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/visual_journey/2.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/cultural_glimpse/3.JPG) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/visual_journey/3.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/cultural_glimpse/4.JPG) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/visual_journey/4.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/1.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/2.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/about/1.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/about/5.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/about/2.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/about/3.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/about/4.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/culture/1.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/culture/2.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/culture/3.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/culture/4.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/culture/5.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/culture/6.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/arts/1.png) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/arts/2.jpg) center; background-size: cover;"></div>
+    </article>
+    <button onclick="trans_left(); anti_spam(); auto_slide(1);" class="carousel_button left"><div><</div></button>
+    <button onclick="trans_right(); anti_spam(); auto_slide(1);" class="carousel_button right"><div>></div></button>
+</section>
 
-        <img src="/img/culture/1.jpg" width="250" class="img-small">
-        <img src="/img/culture/2.jpg" width="250" class="img-small">
-        <!-- <img src="/img/culture/3.jpg" width="250" class="img-small"> -->
-        <img src="/img/culture/4.jpg" width="250" class="img-small">
-        <img src="/img/culture/5.jpg" width="250" class="img-small">
-        <img src="/img/culture/6.jpg" width="250" class="img-small">
-
-        <img src="/img/home/1.jpg" width="250" class="img-small">
-        <img src="/img/home/2.jpg" width="250" class="img-small">
-
-        <img src="/img/home/cultural_glimpse/1.jpg" width="250" class="img-small">
-        <img src="/img/home/cultural_glimpse/2.jpg" width="250" class="img-small">
-        <img src="/img/home/cultural_glimpse/3.jpg" width="250" class="img-small">
-        <img src="/img/home/cultural_glimpse/4.jpg" width="250" class="img-small">
-
-        <img src="/img/home/visual_journey/1.jpg" width="250" class="img-small">
-        <img src="/img/home/visual_journey/2.jpg" width="250" class="img-small">
-        <img src="/img/home/visual_journey/3.jpg" width="250" class="img-small">
-        <!-- <img src="/img/home/visual_journey/4.jpg" width="250" class="img-small"> -->
-
-
-    </div>
+<section id="gallery">
+    <div class="gallImage" style="background: url(img/home/1.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/2.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/cultural_glimpse/1.JPG) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/cultural_glimpse/2.JPG) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/cultural_glimpse/3.JPG) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/cultural_glimpse/4.JPG) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/visual_journey/1.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/visual_journey/2.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/visual_journey/3.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/home/visual_journey/4.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/about/1.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/about/5.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/about/2.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/about/3.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/about/4.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/culture/1.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/culture/2.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/culture/3.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/culture/4.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/culture/5.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/culture/6.jpg) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/arts/1.png) center; background-size: cover;"></div>
+    <div class="gallImage" style="background: url(img/arts/2.jpg) center; background-size: cover;"></div>
 </section>
 
 <!-- Footer -->
@@ -75,4 +144,5 @@
 
 <script src="script.js"></script>
 </body>
+<script src="carousel.js"></script>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sama-Badjao | Sea Nomads</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
     <link rel="icon" type="image/png" href="logo_upper.png">
 </head>
 <body>
@@ -30,47 +31,57 @@
     </div>
 </nav>
 
-<section>
-    <div style="text-align: center; margin-bottom: 60px;">
-        <h1>Welcome to the World of the Sama–Badjao</h1>
-        <p style="max-width: 600px; margin: 0 auto;">
-            Discover the "Sea Nomads"—a remarkable Indigenous group known for their deep connection 
-            to the ocean, resilience, and rich cultural heritage.
-        </p>
-    </div>
-    
-    <img src="img/home/1.jpg" width="1000" height="400" class="img-full" alt="Badjao Landscape">
-
-    <div class="card-container">
-        <div class="left-side">
-            <h2>Who Are the Sama–Badjao?</h2>
-            <p>The Sama–Badjao, often called the “Sea Nomads,” are an Indigenous maritime group from the Sulu Archipelago. Their identity is shaped by mobility, craftsmanship, music, and spiritual ties to the ocean.</p>
-        </div>
-        <div class="right-side">
-            <img src="img/home/2.jpg" width="1000" height="400" class="img-full" alt="Badjao People">
-        </div>
-    </div>
-
-    <h2>Cultural Glimpse</h2>
-    <div class="flex">
-        <img src="img/home/cultural_glimpse/1.jpg" class="img-small" alt="Culture 1">
-        <img src="img/home/cultural_glimpse/2.jpg" class="img-small" alt="Culture 2">
-        <img src="img/home/cultural_glimpse/3.jpg" class="img-small" alt="Culture 3">
-        <img src="img/home/cultural_glimpse/4.jpg" class="img-small" alt="Culture 4">
-    </div>
-
-    <h2>Visual Journey</h2>
-    <div class="slideshow">
-        <img src="img/home/visual_journey/1.jpg" alt="Slide 1">
-        <img src="img/home/visual_journey/2.jpg" alt="Slide 2">
-        <img src="img/home/visual_journey/3.jpg" alt="Slide 3">
-        <img src="img/home/visual_journey/4.jpg" alt="Slide 4">
-    </div>
-
+<section id="landingSect">
+    <div id="landingImage"></div>
+    <h1 style="margin: 0; width: 95vw;">Welcome to the World of The Sama–Badjao</h1>
+    <p style="max-width: 600px; margin: 0 auto; text-align: center; color: var(--white);" class="reveal active">
+        Discover the "Sea Nomads"—a remarkable Indigenous group known for their deep connection 
+        to the ocean, resilience, and rich cultural heritage.
+    </p>
 </section>
 
+<div id="whoAre" class="card-container">
+    <div class="sideText" class="left-side">
+        <h2 class="reveal active">Who Are The Sama–Badjao?</h2>
+        <p class="reveal active">The Sama–Badjao, or “Sea Nomads,” are an Indigenous maritime people from the Sulu Archipelago. Traditionally living on houseboats and moving across coastal waters, they are known for their seafaring skills, boat-building, weaving, music, and rituals tied to the ocean. Even as some now live in stilt houses along the shore, their culture and identity remain deeply connected to the sea.</p>
+    </div>
+    <div class="sideImage" style="background: url(img/home/2.jpg) center; background-size: cover;"></div>
+</div>
+
+<h2 class="reveal active topLine">Cultural Glimpse</h2>
+<p style="text-align: center; width: 80vw; display: flex; justify-self: center; justify-content: center;">See the wonderful art, culture, and daily life of the Sama–Badjao, from their intricately carved wooden boats and ornaments to their beautifully woven mats and textiles that reflect tradition, skill, and life by the sea.</p>
+
+<section class="carousel" ontouchstart="touchstart(event)" ontouchmove="touchmove(event)" ontouchend="touchend()">
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/cultural_glimpse/1.JPG) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/visual_journey/1.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/cultural_glimpse/2.JPG) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/visual_journey/2.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/cultural_glimpse/3.JPG) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/visual_journey/3.jpg) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/cultural_glimpse/4.JPG) center; background-size: cover;"></div>
+    </article>
+    <article class="slide" onmouseenter="disableScroll()" onmouseleave="enableScroll()">
+        <div class="image" style="background: url(img/home/visual_journey/4.jpg) center; background-size: cover;"></div>
+    </article>
+    <button onclick="trans_left(); anti_spam(); auto_slide(1);" class="carousel_button left"><div><</div></button>
+    <button onclick="trans_right(); anti_spam(); auto_slide(1);" class="carousel_button right"><div>></div></button>
+</section>
+            
 <!-- Footer -->
-<div>
+<div id="foot">
     <h6>&copy; 2025 Sama-Badjao Cultural Showcase. All rights reserved.</h6>
     <p>
         This website is a school project. All images and content are used strictly for educational purposes only. <br>
@@ -80,4 +91,5 @@
 
 <script src="script.js"></script>
 </body>
+<script src="carousel.js"></script>
 </html>
