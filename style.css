@@ -11,11 +11,9 @@
     --secondary: #8892b0;
     --accent: #f72585;
     --gradient: linear-gradient(90deg, #64ffda 0%, #00b4d8 100%);
-    --white: #c4cad3;
+    --white: #e6f1ff;
     --nav-height: 80px;
 }
-
-
 
 * {
     box-sizing: border-box; /* Crucial for responsive padding */
@@ -110,14 +108,11 @@ h1 {
     font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive Font Size */
     background: var(--gradient);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-    margin: 0px;
+    margin-bottom: 20px;
     animation: fadeInDown 1s ease-out;
-    text-shadow: 0 0 10px #64ffda80;
 }
-
 
 h2 {
     color: var(--white);
@@ -160,36 +155,6 @@ img {
     height: auto;
 }
 
-.home-section {
-    padding: 0px;
-    max-width: 100%;
-    margin: 0;
-}
-
-.home-content {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    text-align: center;
-    
-}
-
-.home-image{
-    width: 100%;
-    height: 45vw;
-    object-fit: cover;
-    position: absolute;
-    display: block;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    filter: brightness(0.4);
-    transition: 0.3s;
-    margin-bottom: 20px;
-}
-
-
 .img-full {
     width: 100%;
     border-radius: 12px;
@@ -228,85 +193,22 @@ img {
 /* --- SLIDESHOW --- */
 .slideshow {
     display: flex;
-    overflow: visible; /* Keep this as hidden */
-    gap: 15px;
+    overflow-x: auto;
+    gap: 20px;
     padding: 20px 0;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    margin: 30px auto;
-    position: relative;
-    height: 250px; /* Fixed height */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--bg-dark);
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
 }
 
 .slideshow img {
-    flex: 0 0 auto;
-    width: 180px;
-    height: 135px;
+    flex: 0 0 auto; /* Prevents shrinking */
+    width: 80%;
+    max-width: 300px;
+    height: 200px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0.5;
-    filter: blur(1.5px) brightness(0.7);
-    cursor: pointer;
-    transform: scale(0.95);
-    position: relative; /* Ensure z-index works */
-}
-
-.slideshow img.active {
-    width: 300px;
-    height: 225px;
-    opacity: 1;
-    filter: blur(0) brightness(1);
-    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
-    z-index: 10;
-}
-
-.slideshow img:hover {
-    opacity: 0.8;
-    filter: blur(0.5px) brightness(0.9);
-}
-
-.slideshow-container {
-    width: 100%;
-    padding: 20px 40px; /* Add horizontal padding */
-    margin: 30px 0;
-}
-
-/* Slideshow Dots Navigation */
-.slideshow-dots {
-    position: absolute;
-    bottom: -30px; /* Adjusted position */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 12px;
-    z-index: 20; /* Higher z-index */
-    background: rgba(2, 12, 27, 0.8); /* Background so dots are visible */
-    padding: 8px 15px;
-    border-radius: 20px;
-    backdrop-filter: blur(5px);
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(100, 255, 218, 0.3);
-}
-
-.dot:hover {
-    background-color: rgba(100, 255, 218, 0.8);
-    transform: scale(1.2);
-}
-
-.dot.active {
-    background-color: var(--primary);
-    box-shadow: 0 0 10px rgba(100, 255, 218, 0.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
 /* --- TEAM MEMBER CARDS --- */
@@ -339,11 +241,6 @@ img {
     color: var(--primary);
     /* font-weight: 600; */
     font-size: 16px;
-}
-
-p {
-    color: var(--white);
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .team-card img {
