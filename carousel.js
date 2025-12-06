@@ -89,16 +89,16 @@ window.onload = function () {
   }
   if (slides.item(left)) {
     slides.item(left).style.left = "5%";
-    slides.item(left).style.transform = "translate(-80%)";
-    slides.item(left).style.opacity = "0.5";
+    slides.item(left).style.transform = "translate(-60%)";
+    slides.item(left).style.opacity = "0.4";
     slides.item(left).style.height = "33vw";
     slides.item(left).style.width = "50vw";
     if (slides.item(left).children.item(3) != null) slides.item(left).children.item(3).style.opacity = "0";
   }
   if (slides.item(right)) {
     slides.item(right).style.left = "95%";
-    slides.item(right).style.transform = "translate(-20%)";
-    slides.item(right).style.opacity = "0.5";
+    slides.item(right).style.transform = "translate(-40%)";
+    slides.item(right).style.opacity = "0.4";
     slides.item(right).style.height = "33vw";
     slides.item(right).style.width = "50vw";
     if (slides.item(right).children.item(3) != null) slides.item(right).children.item(3).style.opacity = "0";

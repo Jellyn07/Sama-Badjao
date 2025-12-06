@@ -134,8 +134,8 @@
 }
 
 .carousel_button {
-  height: 20vw;
-  width: 15vw;
+  height: 100%;
+  width: 100%;
   position: absolute;
   z-index: 3;
   font-size: 15vw;
@@ -351,9 +351,9 @@
 
   100% {
     left: 95%;
-    transform: translate(-20%);
+    transform: translate(-40%);
     z-Index: 2;
-    opacity: 0.5;
+    opacity: 0.4;
     height: 33vw;
     width: 50vw;
   }
@@ -362,9 +362,9 @@
 @keyframes R2B {
   0% {
     left: 95%;
-    transform: translate(-20%);
+    transform: translate(-40%);
     z-Index: 2;
-    opacity: 0.5;
+    opacity: 0.4;
     height: 33vw;
     width: 50vw;
   }
@@ -401,7 +401,7 @@
 
   100% {
     left: 5%;
-    transform: translate(-80%);
+    transform: translate(-60%);
     z-Index: 2;
     opacity: 0.5;
     height: 33vw;
@@ -412,7 +412,7 @@
 @keyframes L2F {
   0% {
     left: 5%;
-    transform: translate(-80%);
+    transform: translate(-60%);
     z-Index: 2;
     opacity: 0.5;
     height: 33vw;
@@ -451,7 +451,7 @@
 
   100% {
     left: 5%;
-    transform: translate(-80%);
+    transform: translate(-60%);
     z-Index: 2;
     opacity: 0.5;
     height: 33vw;
@@ -462,7 +462,7 @@
 @keyframes L2B {
   0% {
     left: 5%;
-    transform: translate(-80%);
+    transform: translate(-60%);
     z-Index: 2;
     opacity: 0.5;
     height: 33vw;
@@ -501,9 +501,9 @@
 
   100% {
     left: 95%;
-    transform: translate(-20%);
+    transform: translate(-40%);
     z-Index: 2;
-    opacity: 0.5;
+    opacity: 0.4;
     height: 33vw;
     width: 50vw;
   }
@@ -512,9 +512,9 @@
 @keyframes R2F {
   0% {
     left: 95%;
-    transform: translate(-20%);
+    transform: translate(-40%);
     z-Index: 2;
-    opacity: 0.5;
+    opacity: 0.4;
     height: 33vw;
     width: 50vw;
   }

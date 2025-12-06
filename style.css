@@ -420,7 +420,7 @@ body>div:last-of-type p {
 #landingImage {
     position: absolute;
     z-index: -1;
-    opacity: 0.65;
+    opacity: 0.30;
     height: 100vh;
     width: 100vw;
     background: url(img/home/1.jpg) center;
@@ -498,7 +498,7 @@ body>div:last-of-type p {
 .topLine {
     border: 0;
     padding: 0;
-    border-top: 5px solid var(--accent);
+    border-top: 3px solid var(--accent);
     display: flex;
     justify-self: center;
     align-self: center;
@@ -521,8 +521,8 @@ body>div:last-of-type p {
 
 #gallery {
     display: grid;
-    grid-template-columns: 28vw 28vw 28vw;
-    grid-auto-rows: 28vw;
+    grid-template-columns: 24vw 24vw 24vw;
+    grid-auto-rows: 24vw;
     gap: 2vw;
     padding: 0;
     margin: 0;
