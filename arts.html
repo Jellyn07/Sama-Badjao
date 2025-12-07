@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arts & Traditions</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="logo_upper.png">
 </head>
@@ -134,7 +135,86 @@
 <h2 id="songs-section" class="pageTitle reveal active topLine">The Sama-Badjao Traditional Songs</h2>
 <p id="pageDesc" style="text-align: center; width: 80vw; display: flex; justify-self: center; justify-content: center;">Explore the traditional songs of the Sama–Badjao, from melodic chants and sea-inspired narratives to ritual music passed down through generations, capturing their lived experiences, values, and deep connection to the ocean.</p>
 
+<section class="carousel-arts" id="songs-carousel">
+    <!-- Slide 1 -->
+    <article class="slide-arts active">
+        <div class="image-bg" style="background-image: url('img/arts/kanduli.jpg');"></div>
+        <div class="slide-content-arts">
+            <h4>Kanduli</h4>
+            <p>A traditional Badjao celebration song used in rituals and gatherings.</p>
+            <div class="audio-player-arts">
+                <audio class="audio-control">
+                    <source src="img/arts/songs/Menak and Abad Kanduli Part 3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <!-- Custom will be added by JavaScript -->
+            </div>
+        </div>
+    </article>
+    
+    <!-- Slide 2 -->
+    <article class="slide-arts next">
+        <div class="image-bg" style="background-image: url('img/arts/tenggayun.jpg');"></div>
+        <div class="slide-content-arts">
+            <h4>Tenggayun</h4>
+            <p>A traditional Sama-Badjao song that reflects their connection to the sea.</p>
+            <div class="audio-player-arts">
+                <audio class="audio-control">
+                    <source src="img/arts/songs/TINGGAYUN.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </article>
 
+    <!-- Slide 3 -->
+    <article class="slide-arts hidden">
+        <div class="image-bg" style="background-image: url('img/arts/Dilaut.jpg');"></div>
+        <div class="slide-content-arts">
+            <h4>Dilaut</h4>
+            <p>A song about life on the sea, capturing the essence of Badjao maritime culture.</p>
+            <div class="audio-player-arts">
+                <audio class="audio-control">
+                    <source src="img/arts/songs/Dilaut 2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </article>
+
+    <!-- Slide 4 -->
+    <article class="slide-arts hidden">
+        <div class="image-bg" style="background-image: url('img/arts/nasheed.jpg');"></div>
+        <div class="slide-content-arts">
+            <h4>Nasheed - Kun Anta</h4>
+            <p>A spiritual song reflecting Islamic influences in Badjao culture.</p>
+            <div class="audio-player-arts">
+                <audio class="audio-control">
+                    <source src="img/arts/songs/Nasheed - Kun Anta.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </article>
+
+    <!-- Slide 5 -->
+    <article class="slide-arts hidden">
+        <div class="image-bg" style="background-image: url('img/arts/runsai.jpg');"></div>
+        <div class="slide-content-arts">
+            <h4>Runsai</h4>
+            <p>A traditional melody often played during cultural celebrations.</p>
+            <div class="audio-player-arts">
+                <audio class="audio-control">
+                    <source src="img/arts/songs/Runsai  .mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </article>
+
+    <button class="carousel-btn-arts prev" onclick="prevSlide()">‹</button>
+    <button class="carousel-btn-arts next" onclick="nextSlide()">›</button>
+</section>
 
 
 
@@ -160,7 +240,7 @@
         <h2 class="reveal active">Ancestor Worship</h2>
         <p class="reveal active">They practice forms of ancestor worship, making offerings to spirits and deceased relatives.</p>
     </div>
-    <div class="sideImage" style="background: url() center; background-size: cover;"></div>
+    <div class="sideImage" style="background: url(img/arts/Worship.jpg) center; background-size: cover;"></div>
 </div>
 
 <div class="card-container niceCard reverse">
@@ -168,7 +248,7 @@
         <h2 class="reveal active">Offerings</h2>
         <p class="reveal active">They make offerings to the "God of the Sea," known as Omboh Dilaut.</p>
     </div>
-    <div class="sideImage" style="background: url() center; background-size: cover;"></div>
+    <div class="sideImage" style="background: url(img/arts/Worship2.jpg) center; background-size: cover;"></div>
 </div>
 
 <div class="card-container niceCard">
@@ -176,7 +256,7 @@
         <h2 class="reveal active">Traditional Attire</h2>
         <p class="reveal active">The traditional patadjong, a wraparound skirt, is a key part of their traditional attire.</p>
     </div>
-    <div class="sideImage" style="background: url() center; background-size: cover;"></div>
+    <div class="sideImage" style="background: url(img/arts/sama\ badjao\ attire.jpg) center; background-size: cover;"></div>
 </div>
 
 <!-- Footer -->
@@ -189,5 +269,7 @@
 </div>
 
 <script src="script.js"></script>
+
+<script src="arts-carousel.js"></script>
 </body>
 </html>
