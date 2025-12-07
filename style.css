@@ -112,6 +112,23 @@ nav {
     width: 100%;
 }
 
+/* ACTIVE STATE STYLING */
+.nav-links a.active {
+    color: var(--primary);
+    
+}
+
+.nav-links a.active::after {
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.nav-links a.active:hover::after {
+    background-color: var(--primary);
+}
+
+
+
 /* Hamburger Menu (Mobile Only) */
 .burger {
     display: none;
@@ -440,6 +457,10 @@ body>div:last-of-type p {
 }
 
 #pageTitle {
+    margin-top: 120px !important;
+}
+
+.pageTitle {
     margin-top: 120px;
 }
 
@@ -662,4 +683,178 @@ body>div:last-of-type p {
     .sideText>p {
         font-size: 12px;
     }
+}
+
+/*SLideshow*/
+.floating-menu {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    z-index: 1001;
+}
+
+.menu-item,
+.menu-open-button {
+   display: grid;
+   place-items: center;
+   width: 70px;
+   height: 70px;
+   border-radius: 100%;
+   position: absolute;
+   color: #ffffff;
+   transition: transform ease-out 200ms;
+}
+.menu-open {
+   display: none;
+}
+
+.lines {
+   display: block;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -17px;
+   margin-top: -1px;
+   width: 35px;
+   height: 4px;
+   background: var(--bg-dark);
+   border-radius: 1em;
+   transition: transform 200ms;
+}
+.line-1 {
+   transform: translate3d(0, -9px, 0);
+}
+.line-2 {
+   transform: translate3d(0, 0, 0);
+}
+.line-3 {
+   transform: translate3d(0, 9px, 0);
+}
+
+.menu-open:checked + .menu-open-button .line-1 {
+   transform: translate3d(0, 0, 0) rotate(45deg);
+}
+.menu-open:checked + .menu-open-button .line-2 {
+   transform: translate3d(0, 0, 0) scale(0, 1);
+}
+.menu-open:checked + .menu-open-button .line-3 {
+   transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.floating-menu {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+ }
+
+.menu {
+   width: 70px;
+   height: 70px;
+   font-size: 26px;
+}
+.menu-item:hover {
+   background: cyan;
+}
+.menu-item {
+   transition-duration: 0.2s;
+}
+
+.menu-open-button {
+   background: #64ffda;
+   z-index: 2;
+   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   transition-duration: 0.3s;
+   transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+   cursor: pointer;
+}
+.menu-open-button:hover {
+   transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.menu-open:checked + .menu-open-button {
+   transition-timing-function: linear;
+   transition-duration: 0.2s;
+   transform: scale(1, 1) translate3d(0, 0, 0);
+}
+.menu-open:checked ~ .menu-item {
+   transition-duration: 0.4s;
+   transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1.2);
+}
+
+.menu-open:checked ~ .menu-item:nth-child(3) {
+    transform: translate3d(20px, -120px, 0) scale(1); /* Top-left diagonal / Arts */
+ }
+ .menu-open:checked ~ .menu-item:nth-child(4) {
+    transition-delay: 0.08s;
+    transform: translate3d(-50px, -100px, 0) scale(1); /* More left, slightly up / Music*/
+ }
+ .menu-open:checked ~ .menu-item:nth-child(5) {
+    transition-delay: 0.16s;
+    transform: translate3d(-100px, -40px, 0) scale(1); /* More left, slightly down / Mic*/
+ }
+ .menu-open:checked ~ .menu-item:nth-child(6) {
+    transition-delay: 0.24s;
+    transform: translate3d(-110px, 20px, 0) scale(1); /* Left-down diagonal / Traditions */
+ }
+
+ 
+.menu-open-button,
+.red,
+.orange,
+.gold,
+.green,
+.blue,
+.indigo {
+   box-shadow: 3px 3px 10px 0 rgba(178, 34, 34, 0.5);
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+}
+
+.red {
+   background-color: red;
+}
+.red:hover {
+   color: red;
+   text-shadow: none;
+}
+
+.orange {
+   background-color: orange;
+}
+.orange:hover {
+   color: orange;
+   text-shadow: none;
+}
+
+.gold {
+   background-color: gold;
+}
+.gold:hover {
+   color: #ccac00;
+   text-shadow: none;
+}
+
+.green {
+   background-color: green;
+}
+.green:hover {
+   color: green;
+   text-shadow: none;
+}
+
+.blue {
+   background-color: blue;
+}
+.blue:hover {
+   color: blue;
+   text-shadow: none;
+}
+
+.indigo {
+   background-color: indigo;
+}
+.indigo:hover {
+   color: indigo;
+   text-shadow: none;
 }
